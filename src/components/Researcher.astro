@@ -53,7 +53,26 @@ const writing = [
 <Section id="researcher" label="Researcher" title="Birgit Haberpeuntner">
   <div class="space-y-16">
     <div class="grid md:grid-cols-3 gap-10">
-      <div class="md:col-span-2 space-y-6 text-[17px] leading-[1.8] text-[color:var(--color-ink)]/85 max-w-2xl">
+      <div class="md:col-span-2 space-y-6">
+        <img
+          src="/images/researcher/portrait.jpg"
+          alt="Birgit Haberpeuntner"
+          class="w-full max-w-xs aspect-[4/5] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+        />
+      </div>
+      <aside>
+        <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-4">Research Interests</p>
+        <ul class="space-y-2 text-sm">
+          {interests.map((i) => (
+            <li class="border-b border-[color:var(--color-rule)] pb-2">
+              {i.italic ? <em>{i.label}</em> : i.label}
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+
+    <div class="max-w-2xl space-y-6 text-[17px] leading-[1.8] text-[color:var(--color-ink)]/85">
         <p>
           Birgit Haberpeuntner is the principal investigator of <em>The Remediation of Nation</em>.
           She is a researcher at the Department of Media Theory at the University of Applied Arts
@@ -69,17 +88,6 @@ const writing = [
           <em>Walter Benjamin and Cultural Translation</em>, was published by Bloomsbury in 2024.
         </p>
       </div>
-      <aside>
-        <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-4">Research Interests</p>
-        <ul class="space-y-2 text-sm">
-          {interests.map((i) => (
-            <li class="border-b border-[color:var(--color-rule)] pb-2">
-              {i.italic ? <em>{i.label}</em> : i.label}
-            </li>
-          ))}
-        </ul>
-      </aside>
-    </div>
 
     <div>
       <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-6">Selected Writing</p>

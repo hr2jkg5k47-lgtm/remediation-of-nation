@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"/Users/Birgit1/.nvm/versions/node/v24.14.1/bin:/usr/local/bin:$PATH\")",
+      "Bash(npm create:*)",
+      "Bash(shopt -s dotglob)",
+      "Bash(mv purple-photon/* .)",
+      "Bash(npx astro:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:tfm.univie.ac.at)",
+      "WebFetch(domain:www.speakerinnen.org)",
+      "WebFetch(domain:passagen.univie.ac.at)",
+      "WebSearch",
+      "WebFetch(domain:medientheorie.uni-ak.ac.at)",
+      "Bash(cp \"/Users/Birgit1/Desktop/homepage pics/Fotos von mir/agL_Yi3IilTOJLHNEw2h_eR4_srOKJOQr1Uix9y-3TxIsYkUv6drJSQiAZ9sEawfACsuflZ5PAoN90V4lb8EBDLTufqZ5WWPe6vajEXR3mr1-jurTvkgyCbY8gcn9S2eVqeNgYp5zgKRqp7yCjeZlNnoaySAFGPzr4ORqjjt6PVh1SjOwV9gpncPiMGv7aelMvRp5zyqV28adRCg7Z3NE__d21bsyb3.jpg\" /Users/Birgit1/Desktop/Homepage/public/images/researcher/portrait.jpg)",
+      "Bash(cp \"/Users/Birgit1/Desktop/homepage pics/Fotos von mir/j5CSj_0fyO6v-vkel1SsXfFKaWHE92cpR-Gjf_wsAsbtKLe-Yd0O_8cw2O5x-yHamEB_Zypa_VVb11Ldyg4BJDKegiKY5jYC7vMMO88onQKGDeXCdFZyAzoMGuNgPW4ch9Pdx-QC0xquYekIcLRiKRKeXvCuRyvgeoOxjBlXj7awq2sV0ihUPyBb5qPGfUSYYtnBvz4Oq3v9EEvVe5EFjSgllrwfaOu.jpg\" /Users/Birgit1/Desktop/Homepage/public/images/researcher/portrait-reading.jpg)"
+    ]
+  }
+}
