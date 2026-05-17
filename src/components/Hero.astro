@@ -6,8 +6,13 @@ const { mode = "project" } = Astro.props;
 ---
 
 {mode === "project" ? (
-  <section id="top" class="min-h-screen flex items-center px-6 md:px-10 pt-24">
-    <div class="mx-auto max-w-6xl w-full grid md:grid-cols-12 gap-10">
+  <section id="top" class="min-h-screen flex items-center px-6 md:px-10 pt-24 relative overflow-hidden">
+    <img
+      src="/images/grandville.jpg"
+      alt=""
+      class="absolute right-0 top-1/2 -translate-y-1/2 w-[70%] max-w-3xl -scale-x-100 opacity-[0.12] pointer-events-none select-none"
+    />
+    <div class="mx-auto max-w-6xl w-full grid md:grid-cols-12 gap-10 relative z-10">
       <div class="md:col-span-11">
         <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-8">
           Current Research Project
@@ -20,11 +25,6 @@ const { mode = "project" } = Astro.props;
           and contemporary screen cultures — rehearse, repair, reform, and re-stage
           the idea of the nation.
         </p>
-        <img
-          src="/images/grandville.jpg"
-          alt=""
-          class="mt-12 w-full max-w-2xl -scale-x-100 opacity-40"
-        />
         <div class="mt-12 flex flex-wrap items-center gap-4">
           <a href="#project"
              class="inline-flex items-center gap-2 bg-[color:var(--color-ink)] text-[color:var(--color-paper)] px-6 py-3 text-sm tracking-wide hover:bg-[color:var(--color-accent)] transition-colors">
