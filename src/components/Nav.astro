@@ -1,0 +1,26 @@
+---
+const links = [
+  { href: "#project", label: "Project" },
+  { href: "#updates", label: "Updates" },
+  { href: "#researcher", label: "Researcher" },
+  { href: "#previous", label: "Previous" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-[color:var(--color-paper)]/80 border-b border-[color:var(--color-rule)]">
+  <nav class="mx-auto max-w-6xl px-6 md:px-10 h-16 flex items-center justify-between">
+    <a href="#top" aria-label="The Remediation of Nation"
+       class="text-[color:var(--color-ink)] hover:text-[color:var(--color-accent)] transition-colors">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.25" />
+        <line x1="0" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="1.25" />
+      </svg>
+    </a>
+    <ul class="hidden md:flex items-center gap-6 text-sm text-[color:var(--color-muted)]">
+      {links.map(({ href, label }) => (
+        <li><a href={href} class="hover:text-[color:var(--color-ink)] transition-colors">{label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>

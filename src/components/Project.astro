@@ -1,0 +1,70 @@
+---
+import Section from "./Section.astro";
+const focus = [
+  "Media as agents — not mirrors — of national imagination",
+  "Remediation: how the nation is remade across shifting media environments",
+  "Affect, voice, and the temporal architectures of belonging",
+  "Comparative work across radio, film, and contemporary screen cultures",
+];
+---
+
+<Section id="project" label="The Project" title="The Remediation of Nation">
+  <div class="space-y-10">
+    <dl class="grid sm:grid-cols-3 gap-6 text-sm">
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">Funding</dt>
+        <dd>ÖAW · APART-GSK Fellowship</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">Duration</dt>
+        <dd>2024 — 2030</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">Host</dt>
+        <dd>Angewandte · Medientheorie</dd>
+      </div>
+    </dl>
+
+    <div class="max-w-2xl space-y-5 text-[17px] leading-[1.8] text-[color:var(--color-ink)]/85">
+      <p>
+        The nation has, in a sense, always been a media phenomenon. As Benedict Anderson showed,
+        it was media that first made the nation imaginable as a form of collective belonging.
+        Media and nation have been intrinsically bound ever since.
+      </p>
+      <p>
+        For decades now, a crisis of the nation-state has been declared, not least by M. McLuhan,
+        who considers print as "the architect of nationalism," and nationhood as intrinsic to the
+        'Gutenberg Galaxy' — inevitably to be replaced by the age of electronic media, and thus the
+        'Global Village.' Yet here we are, embedded in globalized media environments, and nationhood
+        remains an efficacious principle of social organization.
+      </p>
+      <p>
+        Interrogating this stubborn persistence from a perspective of <em>Medienkulturwissenschaft</em>,
+        the project explores the discipline's border zones with Nationalism Studies to advance our
+        understanding of the relation between media and nation. Drawing on historical comparative
+        research, it approaches nationhood as a <em>dispositif</em>: an arrangement of practices,
+        institutions, and media that is continuously reshaped as its mediality shifts.
+      </p>
+      <p>
+        The guiding concept is <em>remediation</em>: media refashion not only other media, but also
+        the social forms they help constitute — nationhood among them. The nation, on this view, is
+        not what media represent but what media keep remaking. By tracing this dynamic across
+        different media-historical moments, the project asks what the relation between media and
+        nation must be like for the nation to remain so resilient, even under media conditions that
+        were once expected to end it.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-4">Focal Points</p>
+      <ul class="space-y-3 max-w-2xl">
+        {focus.map((f) => (
+          <li class="flex gap-4 text-[17px] leading-relaxed">
+            <span class="text-[color:var(--color-accent)] mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-accent)] shrink-0"></span>
+            <span>{f}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</Section>

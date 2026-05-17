@@ -1,0 +1,105 @@
+---
+import Section from "./Section.astro";
+
+const interests = [
+  { label: "Medienkulturwissenschaft", italic: true },
+  { label: "Media Theory" },
+  { label: "Nationalism Studies" },
+  { label: "Postcolonial Theory" },
+  { label: "Radio & Sound Studies" },
+  { label: "North American Literature & Culture" },
+  { label: "Cultural Translation" },
+  { label: "Critical Theory" },
+  { label: "Walter Benjamin" },
+];
+
+const writing = [
+  {
+    year: "2025",
+    title: "Die Zweite Republik im Radio: Zeitlichkeit, Affekt und die ‘neue’ österreichische Nation",
+    venue: "Österreichische Zeitschrift für Geschichtswissenschaften 36/2",
+    href: "https://doi.org/10.25365/oezg-2025-36-2-9",
+  },
+  {
+    year: "2024",
+    title: "Walter Benjamin and Cultural Translation: Examining a Controversial Legacy",
+    venue: "Bloomsbury",
+    href: "https://www.bloomsbury.com/us/walter-benjamin-and-cultural-translation-9781350387188/",
+  },
+  {
+    year: "2023",
+    title: "Gesten des Ephemeren: Anschlüsse an Walter Benjamin",
+    venue: "Vorwerk 8 (co-edited)",
+  },
+  {
+    year: "2022",
+    title: "\u201CA theater of new, unforeseen constellations\u201D: Walter Benjamin's \u201CArcade\u201D in Postcolonial Theories of (Cultural) Translation",
+    venue: "Translation Studies 15",
+    href: "https://www.tandfonline.com/doi/full/10.1080/14781700.2022.2150679",
+  },
+  {
+    year: "2021",
+    title: "Plurale Autorschaft",
+    venue: "V&R unipress (co-edited)",
+  },
+  {
+    year: "2018",
+    title: "Walter Benjamin und das Kino",
+    venue: "Böhlau (co-edited)",
+  },
+];
+---
+
+<Section id="researcher" label="Researcher" title="Birgit Haberpeuntner">
+  <div class="space-y-16">
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="md:col-span-2 space-y-6 text-[17px] leading-[1.8] text-[color:var(--color-ink)]/85 max-w-2xl">
+        <p>
+          Birgit Haberpeuntner is the principal investigator of <em>The Remediation of Nation</em>.
+          She is a researcher at the Department of Media Theory at the University of Applied Arts
+          Vienna (Angewandte) and works at the intersection of media theory, translation studies,
+          and cultural critique.
+        </p>
+        <p>
+          She studied English and American Studies and Theater, Film and Media Studies in Vienna,
+          with research stays at Concordia University Montreal, Columbia University New York, and
+          the Université de Montréal. She holds a PhD from the University of Vienna and has been a
+          Junior Fellow at the International Research Center for Cultural Studies (IFK) and an
+          APART-GSK Fellow of the Austrian Academy of Sciences. Her first monograph,
+          <em>Walter Benjamin and Cultural Translation</em>, was published by Bloomsbury in 2024.
+        </p>
+      </div>
+      <aside>
+        <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-4">Research Interests</p>
+        <ul class="space-y-2 text-sm">
+          {interests.map((i) => (
+            <li class="border-b border-[color:var(--color-rule)] pb-2">
+              {i.italic ? <em>{i.label}</em> : i.label}
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-6">Selected Writing</p>
+      <ul class="divide-y divide-[color:var(--color-rule)] border-t border-b border-[color:var(--color-rule)]">
+        {writing.map((p) => (
+          <li class="py-5 grid md:grid-cols-12 gap-4 md:gap-8 items-baseline">
+            <span class="md:col-span-1 text-sm text-[color:var(--color-muted)] tabular-nums">{p.year}</span>
+            <div class="md:col-span-8">
+              <h3 class="font-display text-lg leading-snug">
+                {p.href ? (
+                  <a href={p.href} class="hover:text-[color:var(--color-accent)] transition-colors">
+                    {p.title}
+                  </a>
+                ) : p.title}
+              </h3>
+            </div>
+            <span class="md:col-span-3 text-sm italic text-[color:var(--color-muted)]">{p.venue}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</Section>

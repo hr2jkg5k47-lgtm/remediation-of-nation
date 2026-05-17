@@ -1,0 +1,116 @@
+---
+import Section from "./Section.astro";
+const focus = [
+  "The affective texture of postwar broadcasting: sound, voice, and atmosphere as historical evidence",
+  "Radio scheduling as a technology of collective time",
+  "Continuities and ruptures between wartime and postwar media practice",
+  "Nationhood as a media-cultural form rather than a given category",
+];
+
+type OutputItem = {
+  date: string;
+  kind: string;
+  title: string;
+  venue?: string;
+  href?: string;
+};
+
+const outputs: OutputItem[] = [
+  {
+    date: "2024",
+    kind: "Conference",
+    title: "ZU(ge)HÖREN: Radio, Affekt, Geschichte. Konferenz anlässlich \"100 Jahre Radio in Österreich\"",
+    venue: "hdgö & ORF Radiokulturhaus, Vienna",
+    href: "https://hdgoe.at/zugehoeren_konferenz_tag1",
+  },
+  {
+    date: "2025",
+    kind: "Exhibition",
+    title: "Es funkt! Österreich zwischen Propaganda und Protest",
+    venue: "Haus der Geschichte Österreich, Vienna",
+    href: "https://hdgoe.at/es-funkt",
+  },
+];
+---
+
+<Section id="previous" label="Previous Projects" title="Austrian Postwar Radio (1945–55)" titleHref="https://hdgoe.at/acontra">
+  <div class="space-y-10">
+    <dl class="grid sm:grid-cols-3 gap-6 text-sm">
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">Role</dt>
+        <dd>Project Leadership</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">Duration</dt>
+        <dd>2022 — 2024</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-2">Host</dt>
+        <dd>University of Vienna · TFM</dd>
+      </div>
+    </dl>
+
+    <div class="max-w-2xl space-y-5 text-[17px] leading-[1.8] text-[color:var(--color-ink)]/85">
+      <p>
+        <em>The Affective Construction of National Temporalities in Austrian Postwar Radio
+        (1945–55)</em> – ACONTRA for short – is a collaborative project between the University
+        of Music and Performing Arts Vienna, the University of Vienna, and the House of Austrian
+        History. It examines the role of radio as a mass medium in the process of constructing
+        national consciousness during the early years of the Second Republic.
+      </p>
+      <p>
+        The starting point for this research is auditory source material from Austrian
+        broadcasting institutions: drawing on existing programme recordings, the project analyses
+        how imaginings and projections of the country's past and future are conveyed affectively
+        through the sonic dimension, and how the medium thereby contributes to structuring
+        national temporality and belonging.
+      </p>
+      <p>
+        Through close attention to programming, voice, scheduling, and sonic atmosphere, the
+        project asked how broadcasting helped to organise affect, memory, and belonging in a
+        country negotiating both rupture and continuity after 1945. Rather than treating radio
+        as a neutral channel, the study read it as a medium in which "the nation" was rehearsed
+        daily — through rhythms of address, modes of listening, and the temporal architectures
+        of the programme schedule.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-4">Focal Points</p>
+      <ul class="space-y-3 max-w-2xl">
+        {focus.map((f) => (
+          <li class="flex gap-4 text-[17px] leading-relaxed">
+            <span class="text-[color:var(--color-accent)] mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-accent)] shrink-0"></span>
+            <span>{f}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {outputs.length > 0 && (
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-6">Outputs & Events</p>
+        <ul class="divide-y divide-[color:var(--color-rule)] border-t border-b border-[color:var(--color-rule)]">
+          {outputs.map((o) => (
+            <li class="py-5 grid md:grid-cols-12 gap-4 md:gap-8 items-baseline">
+              <span class="md:col-span-1 text-sm text-[color:var(--color-muted)] tabular-nums">{o.date}</span>
+              <span class="md:col-span-2 text-xs uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+                {o.kind}
+              </span>
+              <div class="md:col-span-6">
+                <h3 class="font-display text-lg leading-snug">
+                  {o.href ? (
+                    <a href={o.href} class="hover:text-[color:var(--color-accent)] transition-colors">
+                      {o.title}
+                    </a>
+                  ) : o.title}
+                </h3>
+              </div>
+              <span class="md:col-span-3 text-sm italic text-[color:var(--color-muted)]">{o.venue}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</Section>

@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Project from "../components/Project.astro";
+import Updates from "../components/Updates.astro";
+import Researcher from "../components/Researcher.astro";
+import PreviousProjects from "../components/PreviousProjects.astro";
+import Contact from "../components/Contact.astro";
+
+// "project" — current fellowship is the centre of the site (during funding period)
+// "person"  — researcher is the centre of the site (after the fellowship)
+const mode: "project" | "person" = "project";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="The Remediation of Nation — a research project by Birgit Haberpeuntner on how media rehearse and re-stage national belonging." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <title>The Remediation of Nation — A Research Project by Birgit Haberpeuntner</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <Hero mode={mode} />
+      {mode === "project" ? (
+        <>
+          <Project />
+          {/* <Methods /> — archived in _archive/Methods.astro */}
+          <Updates />
+          <Researcher />
+          <PreviousProjects />
+          <Contact />
+        </>
+      ) : (
+        <>
+          <Researcher />
+          <Updates />
+          <Project />
+          {/* <Methods /> — archived in _archive/Methods.astro */}
+          <PreviousProjects />
+          <Contact />
+        </>
+      )}
+    </main>
+  </body>
+</html>

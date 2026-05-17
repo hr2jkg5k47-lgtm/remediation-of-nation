@@ -1,0 +1,37 @@
+---
+import Section from "./Section.astro";
+const methods = [
+  {
+    n: "01",
+    title: "Media Cultural Studies",
+    desc: "Reading media forms as sites where collective experience is shaped, not merely represented.",
+  },
+  {
+    n: "02",
+    title: "Translation Theory",
+    desc: "Translation understood beyond the linguistic — as a movement between cultural, disciplinary, and political registers.",
+  },
+  {
+    n: "03",
+    title: "Sound & Radio Studies",
+    desc: "Attention to voice, listening, and the temporal architectures of broadcasting.",
+  },
+  {
+    n: "04",
+    title: "Critical Theory",
+    desc: "Engagement with Walter Benjamin and the postcolonial reception of European critical thought.",
+  },
+];
+---
+
+<Section id="methods" label="Approach" title="How the Project Works">
+  <div class="grid sm:grid-cols-2 gap-px bg-[color:var(--color-rule)] border border-[color:var(--color-rule)]">
+    {methods.map((m) => (
+      <article class="bg-[color:var(--color-paper)] p-8 md:p-10">
+        <p class="text-xs text-[color:var(--color-muted)] tabular-nums mb-4">{m.n}</p>
+        <h3 class="font-display text-2xl mb-3">{m.title}</h3>
+        <p class="text-[15px] leading-[1.7] text-[color:var(--color-ink)]/80 max-w-sm">{m.desc}</p>
+      </article>
+    ))}
+  </div>
+</Section>

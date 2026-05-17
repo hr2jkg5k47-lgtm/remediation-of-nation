@@ -1,0 +1,48 @@
+---
+import Section from "./Section.astro";
+
+// Edit this list as new outputs and events appear.
+type Update = {
+  date: string;
+  kind: "Talk" | "Publication" | "Workshop" | "Workshop / CfP" | "News";
+  title: string;
+  venue?: string;
+  href?: string;
+};
+
+const updates: Update[] = [
+  {
+    date: "2026",
+    kind: "Workshop / CfP",
+    title: 'Who is "everyone"? Analyzing media practices of (national) belonging',
+    venue: "Forthcoming · University of Applied Arts Vienna",
+    href: "/workshop-everyone",
+  },
+];
+---
+
+<Section id="updates" label="Updates" title="Upcoming">
+  <ul class="divide-y divide-[color:var(--color-rule)] border-t border-b border-[color:var(--color-rule)]">
+    {updates.map((u) => (
+      <li class="py-6 grid md:grid-cols-12 gap-4 md:gap-8 items-baseline">
+        <span class="md:col-span-1 text-sm text-[color:var(--color-muted)] tabular-nums">{u.date}</span>
+        <span class="md:col-span-2 text-xs uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
+          {u.kind}
+        </span>
+        <div class="md:col-span-6">
+          <h3 class="font-display text-xl leading-snug">
+            {u.href ? (
+              <a href={u.href} class="hover:text-[color:var(--color-accent)] transition-colors">
+                {u.title}
+              </a>
+            ) : u.title}
+          </h3>
+        </div>
+        <span class="md:col-span-3 text-sm italic text-[color:var(--color-muted)]">{u.venue}</span>
+      </li>
+    ))}
+  </ul>
+  <p class="mt-6 text-sm text-[color:var(--color-muted)] max-w-xl">
+    A running record of talks, publications, and events tied to <em>The Remediation of Nation</em>.
+  </p>
+</Section>

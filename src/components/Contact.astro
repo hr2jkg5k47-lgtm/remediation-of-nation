@@ -1,0 +1,28 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section id="contact" label="Contact" title="Get in Touch">
+  <div class="grid md:grid-cols-2 gap-10 max-w-3xl">
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-3">Email</p>
+      <a href="mailto:birgit.haberpeuntner@uni-ak.ac.at"
+         class="text-[17px] whitespace-nowrap hover:text-[color:var(--color-accent)] transition-colors">
+        birgit.haberpeuntner@uni-ak.ac.at
+      </a>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-muted)] mb-3">Affiliation</p>
+      <p class="text-[17px] leading-relaxed">
+        University of Applied Arts Vienna<br/>
+        Department of Media Theory<br/>
+        Vordere Zollamtsstraße 7, A-1030 Wien
+      </p>
+    </div>
+  </div>
+
+  <footer class="mt-24 pt-8 border-t border-[color:var(--color-rule)] flex flex-wrap items-center justify-between gap-4 text-xs text-[color:var(--color-muted)]">
+    <span>© {new Date().getFullYear()} Birgit Haberpeuntner</span>
+    <span>Last updated April 2026</span>
+  </footer>
+</Section>
